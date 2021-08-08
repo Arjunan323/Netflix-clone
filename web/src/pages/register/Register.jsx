@@ -11,7 +11,7 @@ const Register = () => {
   const handleStart = () => {
     setIsEmail(emailRef.current.value);
   };
-  
+
   const handleFinsh = () => {
     setPassword(passwordRef.current.value);
   };
@@ -37,6 +37,7 @@ const Register = () => {
         {!isEmail ? (
           <div className="input">
             <input
+              value={isEmail}
               type="email"
               name="email"
               id="email"
@@ -50,6 +51,7 @@ const Register = () => {
         ) : (
           <form className="input">
             <input
+              value={password}
               type="password"
               name="password"
               id="password"
